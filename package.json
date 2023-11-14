@@ -1,0 +1,39 @@
+{
+  "name": "cse341-project1",
+  "version": "1.0.0",
+  "description": "Project foor CSE341",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reaganhsmith/cse341-project1.git"
+  },
+  "author": "Reagan Houser-Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reaganhsmith/cse341-project1/issues"
+  },
+  "homepage": "https://github.com/reaganhsmith/cse341-project1#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mongo": "^0.1.0",
+    "mongodb": "^6.2.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.0.3"
+  },
+  "lint": "eslint .",
+  "lint:fix": "eslint --fix",
+  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+}
