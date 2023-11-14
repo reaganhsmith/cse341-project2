@@ -1,15 +1,16 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Users Api",
-    "description": "Users Api",
+    "title": "Pokemon Api",
+    "description": "Pokemon Api",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+   "http", 
+   "https"
+    
   ],
   "paths": {
     "/": {
@@ -21,16 +22,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
@@ -65,19 +56,22 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "LastName": {
+                "type": {
                   "example": "any"
                 },
-                "email": {
+                "number": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "color": {
                   "example": "any"
                 },
-                "birthday": {
+                "evolution": {
+                  "example": "any"
+                },
+                "img": {
                   "example": "any"
                 }
               }
@@ -87,9 +81,6 @@
         "responses": {
           "204": {
             "description": "No Content"
-          },
-          "412": {
-            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -141,19 +132,22 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "name": {
                   "example": "any"
                 },
-                "LastName": {
+                "type": {
                   "example": "any"
                 },
-                "email": {
+                "number": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "color": {
                   "example": "any"
                 },
-                "birthday": {
+                "evolution": {
+                  "example": "any"
+                },
+                "img": {
                   "example": "any"
                 }
               }
@@ -166,9 +160,6 @@
           },
           "400": {
             "description": "Bad Request"
-          },
-          "412": {
-            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"

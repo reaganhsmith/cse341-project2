@@ -1,12 +1,13 @@
 const validator = require('../helpers/validate');
 
-const saveContact = (req, res, next) => {
+const savePokemon = (req, res, next) => {
   const validationRule = {
-    firstName: 'required|string',
-    LastName: 'required|string',
-    email: 'required|email',
-    favoriteColor: 'required|string',
-    birthday: 'string'
+    name: 'required|string',
+    type: 'required|string',
+    number: 'required|string',
+    color: 'required|string',
+    evolution: 'string',
+    img: 'string',
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {
@@ -22,5 +23,5 @@ const saveContact = (req, res, next) => {
 };
 
 module.exports = {
-  saveContact
+  savePokemon 
 };

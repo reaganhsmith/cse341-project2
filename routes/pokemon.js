@@ -6,9 +6,9 @@ router.get('/', pokemonCont.getAllPokemon);
 
 router.get('/:id', pokemonCont.getSinglePokemon);
 
-router.post('/', validation.saveContact, pokemonCont.addPokemon);
+router.post('/', pokemonCont.addPokemon);
 
-router.put('/:id', validation.saveContact, pokemonCont.updatePokemon);
+router.put('/:id', pokemonCont.updatePokemon);
 
 router.delete('/:id', pokemonCont.deletePokemon);
 

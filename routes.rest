@@ -1,0 +1,34 @@
+### Get all Pokemon
+GET http://localhost:3000/pokemon
+
+### Get contants by IDs
+GET http://localhost:3000/pokemon/6553ffb5c9abe82dbd3fba13
+
+### Update Contact 
+PUT http://localhost:3000/pokemon/6553ffb5c9abe82dbd3fba13 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bulbasaur",
+      "type": "Grass, Posion",
+      "number": "0001",
+      "color": "Green, Yellow",
+      "evolution": "Ivysaur",
+      "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png"
+}
+
+### ADD Pokemon
+POST http://localhost:3000/pokemon HTTP/1.1
+content-type: application/json
+
+{
+   "name": "Ninetales",
+    "type": "Fire",
+    "number": "0038",
+    "color": "Cream",
+    "evolution": "Final Evolution",
+    "img": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/038.png"
+}
+
+### Delete Pokemon by ID
+DELETE http://localhost:3000/pokemon/655407bb5b0d090a24c5bf9f

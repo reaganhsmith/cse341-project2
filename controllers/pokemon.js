@@ -34,11 +34,12 @@ const getSinglePokemon = async (req, res) => {
 const addPokemon = async (req, res) => {
     //#swagger.tags=['pokemon']
     const user = {
-        firstName: req.body.firstName,
-        LastName: req.body.LastName,
-        email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        name: req.body.name,
+        type: req.body.type,
+        number: req.body.number,
+        color: req.body.color,
+        evolution: req.body.evolution,
+        img: req.body.img
     };
     const response = await mongodb.getDatabase().db().collection('pokemon').insertOne(user);
     if (response.acknowledged){
@@ -55,11 +56,12 @@ const updatePokemon = async (req, res) => {
       }
     const userId = new ObjectId(req.params.id);
     const user = {
-        firstName: req.body.firstName,
-        LastName: req.body.LastName,
-        email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        name: req.body.name,
+        type: req.body.type,
+        number: req.body.number,
+        color: req.body.color,
+        evolution: req.body.evolution,
+        img: req.body.img
     };
     const response = await mongodb.getDatabase().db().collection('pokemon').replaceOne({_id: userId}, user);
     if (response.modifiedCount > 0){
