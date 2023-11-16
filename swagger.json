@@ -5,11 +5,11 @@
     "description": "Pokemon Api",
     "version": "1.0.0"
   },
-  "host": "https://cse341-project2-6a8p.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-   "https"
-    
+    "http",
+    "https"
   ],
   "paths": {
     "/": {
@@ -61,6 +61,9 @@
                 "type": {
                   "example": "any"
                 },
+                "weakness": {
+                  "example": "any"
+                },
                 "number": {
                   "example": "any"
                 },
@@ -68,6 +71,9 @@
                   "example": "any"
                 },
                 "evolution": {
+                  "example": "any"
+                },
+                "category": {
                   "example": "any"
                 },
                 "img": {
@@ -137,6 +143,9 @@
                 "type": {
                   "example": "any"
                 },
+                "weakness": {
+                  "example": "any"
+                },
                 "number": {
                   "example": "any"
                 },
@@ -144,6 +153,9 @@
                   "example": "any"
                 },
                 "evolution": {
+                  "example": "any"
+                },
+                "category": {
                   "example": "any"
                 },
                 "img": {
