@@ -7,7 +7,9 @@
   },
   "host": "cse341-project2-6a8p.onrender.com",
   "basePath": "/",
-  "schemes": "https",
+  "schemes": [
+    "https"
+  ],
   "paths": {
     "/": {
       "get": {
@@ -18,6 +20,16 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
