@@ -3,8 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAllPokemon = async (req, res) => {
     //#swagger.tags=['pokemon']
-    const result = await mongodb.getDatabase().db().collection('pokemon').find();
-    result.toArray().then((err, pokemon) => {
+    mongodb.getDatabase().db().collection('pokemon').find().toArray().then((err, pokemon) => {
         if(err){
             res.status(400).json({message: err});
         }
@@ -21,8 +20,7 @@ const getSinglePokemon = async (req, res) => {
       }
       const pokemonId = new ObjectId(req.params.id);
    
-    const result = await mongodb.getDatabase().db().collection('pokemon').find({_id: pokemonId});
-    result.toArray().then((err, pokemon) => {
+    mongodb.getDatabase().db().collection('pokemon').find({_id: pokemonId}).toArray().then((err, pokemon) => {
         if(err){
             res.status(400).json({message: err});
         }
