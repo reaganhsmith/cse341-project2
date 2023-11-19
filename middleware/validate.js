@@ -4,10 +4,12 @@ const savePokemon = (req, res, next) => {
   const validationRule = {
     name: 'required|string',
     type: 'required|string',
-    number: 'required|string',
+    weakness: 'required|string',
+    number: 'required|min:4',
     color: 'required|string',
     evolution: 'string',
-    img: 'string',
+    category: 'string',
+    img: 'string'
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {
