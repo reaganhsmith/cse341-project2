@@ -38,7 +38,7 @@ process.on('uncaughtException', (err, origin) => {
 passport.use(new gitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL
+    callbackURL: "https://cse341-project2-6a8p.onrender.com/github/callback"
 },
 function(accessToken, refreshToken, profile, done){
     return done(null, profile);
