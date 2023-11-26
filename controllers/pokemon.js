@@ -3,7 +3,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAllPokemon = async (req, res) => {
     //#swagger.tags=['pokemon']
-    mongodb.getDatabase().db().collection('pokemon').find().toArray().then((err, pokemon) => {
+    mongodb.getDatabase().db('pokemon').collection('pokemon').find().toArray().then((err, pokemon) => {
         if(err){
             res.status(400).json({message: err});
         }
@@ -20,7 +20,7 @@ const getSinglePokemon = async (req, res) => {
       }
       const pokemonId = new ObjectId(req.params.id);
    
-    mongodb.getDatabase().db().collection('pokemon').find({_id: pokemonId}).toArray().then((err, pokemon) => {
+    mongodb.getDatabase().db('pokemon').collection('pokemon').find({_id: pokemonId}).toArray().then((err, pokemon) => {
         if(err){
             res.status(400).json({message: err});
         }
@@ -41,7 +41,7 @@ const addPokemon = async (req, res) => {
         category: req.body.category,
         img: req.body.img
     };
-    const response = await mongodb.getDatabase().db().collection('pokemon').insertOne(pokemon);
+    const response = await mongodb.getDatabase().db('pokemon').collection('pokemon').insertOne(pokemon);
     if (response.acknowledged){
         res.status(204).send();
     } else{
@@ -65,7 +65,7 @@ const updatePokemon = async (req, res) => {
         category: req.body.category,
         img: req.body.img
     };
-    const response = await mongodb.getDatabase().db().collection('pokemon').replaceOne({_id: pokemonId}, pokemon);
+    const response = await mongodb.getDatabase().db('pokemon').collection('pokemon').replaceOne({_id: pokemonId}, pokemon);
     if (response.modifiedCount > 0){
         res.status(204).send();
     } else{
@@ -79,7 +79,7 @@ const deletePokemon = async (req, res) => {
         res.status(400).json('Must use a valid pokemon Id. Cannot find pokemon.');
       }
       const pokemonId = new ObjectId(req.params.id);
-    const response = await mongodb.getDatabase().db().collection('pokemon').deleteOne({_id: pokemonId});
+    const response = await mongodb.getDatabase().db('pokemon').collection('pokemon').deleteOne({_id: pokemonId});
     if (response.deletedCount > 0){
         res.status(204).send();
     } else{
