@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
 });
 
 router.use('/pokemon', require('./pokemon'));
+router.use('/user', require('./user'));
 
 router.get('/login', passport.authenticate('github'), (req, res) => {});
 
